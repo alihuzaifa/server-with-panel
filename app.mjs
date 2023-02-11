@@ -28,11 +28,11 @@ app.use("/api", router);
 const __dirname = Path.resolve();
 app.use(
   "/",
-  express.static(Path.join(__dirname, "..//Admin-Hackathon-main/build"))
+  express.static(Path.join(__dirname, "./Admin-Hackathon-main/build"))
 );
 app.use(
   "*",
-  express.static(Path.join(__dirname, "..//Admin-Hackathon-main/build"))
+  express.static(Path.join(__dirname, "./Admin-Hackathon-main/build"))
 );
 
 app.listen(port, () => {
