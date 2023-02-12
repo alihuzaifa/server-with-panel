@@ -10,9 +10,9 @@ import Path from "path";
 // BASIC INITIALLIZATION
 const app = express();
 const mongodbURI =
-  "mongodb+srv://huzaifa:huzaifa123@cluster0.p2sb1ug.mongodb.net/?retryWrites=true&w=majority" ||
-  process.env.mongodbURI;
-const port = 5000 || process.env.port;
+  process.env.mongodbURI ||
+  "mongodb+srv://huzaifa:huzaifa123@cluster0.p2sb1ug.mongodb.net/?retryWrites=true&w=majority";
+const port = process.env.port || 5000;
 
 // MIDDLEWARES
 app.use(express.json());
